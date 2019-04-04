@@ -37,3 +37,11 @@ bin 目录中提供了快速启动的脚本
 1. pid 所有脚本必须
 2. 类匹配模式，除了 shutdown 和 listRecords 其他都要
 3. 方法匹配模式，除了 shutdown 和 listRecords 其他都要
+
+# 测试效果
+
+用于测试效果，可以在 bin/demo 里执行 java Clock 启动一个 java 进程
+
+然后执行 jps 查看进程 id
+
+选择要测试的模块对这个进程id进行测试，观察其输出
