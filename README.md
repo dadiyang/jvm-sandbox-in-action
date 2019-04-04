@@ -1,6 +1,6 @@
 # JVM-SANDBOX 实战项目
 
-本项目基于 JVM-SANDBOX 开发扩展模块
+本项目基于 [JVM-SANDBOX](https://github.com/alibaba/jvm-sandbox) 开发扩展模块
 
 # 模块目录
 
