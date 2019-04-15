@@ -4,11 +4,13 @@
 
 # 模块目录
 
-|模块名|功能|
-|----|----|
-|time-tunnel|时间隧道，记录方法的调用，支持根据 id 进行方法调用回放|
+|模块名|功能|说明|
+|----|----|----|
+|time-tunnel|时间隧道|记录方法的调用，支持根据 id 进行方法调用回放|
 |call-stack-time-consume|调用堆栈及耗时|
 |time-consume|调用栈中每个方法调用的耗时|
+|call-chain|调用链追踪模块|id 相同则为同一个调用链，入口方法栈深度为 0|
+|http-servlet-context|请求上下文模块，启动时自动加载|拦截 HttpServlet.service 方法获取当前 request 和 response 对象，放到 context 中，可以通过 RequestContextHolder.get 静态方法获取|
 
 # 脚本
 
@@ -25,7 +27,7 @@ bin 目录中提供了快速启动的脚本
 |listRecords.sh.sh pid|查看方法调用的记录|
 |callStackTimeConsume.sh pid classPattern behaviorPattern|开启调用堆栈及耗时|
 |timeconsume.sh pid classPattern behaviorPattern|打印方法调用耗时|
-
+|call-chain.sh pid classPattern behaviorPattern|开启调用链追踪|
 先执行 install.sh 会自动编译并将模块安装到 ~/.opt/sandbox/module 目录下
 
 注：在脚本传参使用通配符记得加引号，如：
